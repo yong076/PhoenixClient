@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,8 +16,34 @@
 		1823AD442377251000B55D61 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1823AD3C2377251000B55D61 /* Defaults.swift */; };
 		1823AD452377251000B55D61 /* Socket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1823AD3D2377251000B55D61 /* Socket.swift */; };
 		18C93833237722FA00740D97 /* PhoenixClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 18C93831237722FA00740D97 /* PhoenixClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		18C9383B2377231500740D97 /* Starscream in Frameworks */ = {isa = PBXBuildFile; productRef = 18C9383A2377231500740D97 /* Starscream */; };
+		AB573C4A23FBEBC500C64C6B /* Starscream.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = AB573C4923FBEBC400C64C6B /* Starscream.framework */; };
+		AB573C4C23FBEBFF00C64C6B /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB573C4923FBEBC400C64C6B /* Starscream.framework */; };
+		AB573C4D23FBEBFF00C64C6B /* Starscream.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AB573C4923FBEBC400C64C6B /* Starscream.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AB573C4823FBEB9D00C64C6B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+				AB573C4A23FBEBC500C64C6B /* Starscream.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB573C4E23FBEBFF00C64C6B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				AB573C4D23FBEBFF00C64C6B /* Starscream.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1823AD332377241200B55D61 /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
@@ -32,6 +58,7 @@
 		18C9382E237722FA00740D97 /* PhoenixClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PhoenixClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		18C93831237722FA00740D97 /* PhoenixClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhoenixClient.h; sourceTree = "<group>"; };
 		18C93832237722FA00740D97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB573C4923FBEBC400C64C6B /* Starscream.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Starscream.framework; path = Carthage/Build/iOS/Starscream.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,7 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18C9383B2377231500740D97 /* Starscream in Frameworks */,
+				AB573C4C23FBEBFF00C64C6B /* Starscream.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,10 +91,12 @@
 		18C93824237722FA00740D97 = {
 			isa = PBXGroup;
 			children = (
+				AB573C4923FBEBC400C64C6B /* Starscream.framework */,
 				1823AD332377241200B55D61 /* Package.swift */,
 				18C9383C2377234E00740D97 /* Sources */,
 				18C93830237722FA00740D97 /* PhoenixClient */,
 				18C9382F237722FA00740D97 /* Products */,
+				AB573C4B23FBEBFF00C64C6B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,6 +125,13 @@
 			path = Sources;
 			sourceTree = "<group>";
 		};
+		AB573C4B23FBEBFF00C64C6B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -118,6 +154,8 @@
 				18C9382A237722FA00740D97 /* Sources */,
 				18C9382B237722FA00740D97 /* Frameworks */,
 				18C9382C237722FA00740D97 /* Resources */,
+				AB573C4823FBEB9D00C64C6B /* CopyFiles */,
+				AB573C4E23FBEBFF00C64C6B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,7 +163,6 @@
 			);
 			name = PhoenixClient;
 			packageProductDependencies = (
-				18C9383A2377231500740D97 /* Starscream */,
 			);
 			productName = PhoenixClient;
 			productReference = 18C9382E237722FA00740D97 /* PhoenixClient.framework */;
@@ -155,7 +192,6 @@
 			);
 			mainGroup = 18C93824237722FA00740D97;
 			packageReferences = (
-				18C938392377231500740D97 /* XCRemoteSwiftPackageReference "Starscream" */,
 			);
 			productRefGroup = 18C9382F237722FA00740D97 /* Products */;
 			projectDirPath = "";
@@ -324,6 +360,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = PhoenixClient/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -348,6 +388,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = PhoenixClient/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -385,25 +429,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		18C938392377231500740D97 /* XCRemoteSwiftPackageReference "Starscream" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/daltoniam/Starscream";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 3.1.1;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		18C9383A2377231500740D97 /* Starscream */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 18C938392377231500740D97 /* XCRemoteSwiftPackageReference "Starscream" */;
-			productName = Starscream;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 18C93825237722FA00740D97 /* Project object */;
 }
