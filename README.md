@@ -47,7 +47,7 @@ If you use Carthage to manage your dependencies, simply add
 SwiftPhoenixClient to your `Cartfile`:
 
 ```
-github "davidstump/SwiftPhoenixClient" ~> 1.0
+github "yong076/SwiftPhoenixClient"
 ```
 
 ### SwiftPackageManager
